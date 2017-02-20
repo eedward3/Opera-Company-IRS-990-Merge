@@ -8,6 +8,7 @@
   * "Opera_Companies_List_2017" can be found in this repository. 
   * "Opera_Companies_No_Financials_List_2017" can be found in this repository
   * "Opera_Companies_Canada_List_2017" can be found in this repository
+  * "Merged_Opera_Dataset_by_EIN" can be found in this repository. Note: this dataset is the result of running the script. 
 4. Author(s) Names (or person responsible for collecting the data):   
   * Emily Edwards
   * Jonathan Cain 
