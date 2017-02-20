@@ -1,0 +1,63 @@
+---
+title: "Opera_Company_IRS_990_Merge"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. The purpose of this script is to merge a compiled list of all Opera Companies in the US with their corresponding IRS 990 data, if available. The list of Opera Companies was compiled by the authors and is avaiable in the repository as file "Opera_Companies_List_2017". The IRS 990 data can be found at ["Exempt Organizations Business Master File Extract (EO BMF)""](https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf).
+
+### Load IRS 990 Data
+First pull in the IRS 990 data by region.
+```{r}
+region1 <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo1.csv")) ## Northeast US
+region2 <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo2.csv")) ## Midatlantic & Great Lakes
+region3 <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo3.csv")) ## GulfCoast & Pacific Coast
+region4 <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo4.csv")) ## All other Areas
+regionPR <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo_pr.csv")) ## Puerto Rico
+regionInt <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo_xx.csv")) ## International != Puerto Rico
+```
+
+### Combine IRS 990 Data
+Combine these regional files into a single file using an rbind. This file is named "EOBMF2015".
+```{r}
+EOBMF2015 <- rbind(region1,region2,region3,region4,regionPR,regionInt)
+```
+
+### Load Opera Companies Data
+Next pull in the list of Opera Companies from the compiled dataset.
+```{r}
+Opera_data <- read.csv("NA_Opera_Companies_List_Final.csv")
+```
+
+### Merge the Data
+The two datasets can then be merged together by the shared EIN column.  
+Only columns 1 and 2 from the Opera dataset are merged in order to keep the "City" and "State" columns from repeating in the merged dataset.  
+Using the argument all.x=TRUE will ensure that all of the Opera companies in the compiled dataset will be kept in the merged file, even if not matched with a corresponding IRS 990 object. All.y=FALSE will ensure that only those organizations that match with an Opera Company will merge into the new file from the EOBMF2015 dataset. 
+```{r}
+Merged_data <- merge(Opera_data[1:2], EOBMF2015, by="EIN", all.x=TRUE, all.y=FALSE, sort=FALSE)
+```
+
+### Export the Merged Data
+This newly created dataframe can then be exported as a CSV file. 
+```{r}
+write.csv(Merged_data, file="Merged_Opera_Dataset_by_EIN.csv")
+```
+
+### The Code All Together
+```{r}
+region1 <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo1.csv"))
+region2 <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo2.csv"))
+region3 <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo3.csv"))
+region4 <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo4.csv"))
+regionPR <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo_pr.csv"))
+regionInt <- read.csv(url("http://www.irs.gov/file_source/pub/irs-soi/eo_xx.csv"))
+
+EOBMF2015 <- rbind(region1,region2,region3,region4,regionPR,regionInt)
+
+Opera_data <- read.csv("NA_Opera_Companies_List_Final.csv")
+
+Merged_data <- merge(Opera_data[1:2], EOBMF2015, by="EIN", all.x=TRUE, all.y=FALSE, sort=FALSE)
+
+write.csv(Merged_data, file="Merged_Opera_Dataset_by_EIN.csv")
+```
+
+
