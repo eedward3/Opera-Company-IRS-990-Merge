@@ -5,7 +5,7 @@
   N/A
 3. Other Files Related to These Data (Other Files in Set, e.g.):  
   * ["Exempt Organizations Business Master File Extract (EO BMF)"](https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf)
-  * "Opera_List_2017" which can be found in this repository. 
+  * "Opera_Companies_List_2017" which can be found in this repository. 
 4. Author(s) Names (or person responsible for collecting the data):   
   * Emily Edwards
   * Jonathan Cain 
