@@ -5,12 +5,15 @@
   N/A
 3. Other Files Related to These Data (Other Files in Set, e.g.):  
   * ["Exempt Organizations Business Master File Extract (EO BMF)"](https://www.irs.gov/charities-non-profits/exempt-organizations-business-master-file-extract-eo-bmf)
-  * "Opera_Companies_List_2017" which can be found in this repository. 
+  * "Opera_Companies_List_2017" can be found in this repository. 
+  * "Opera_Companies_No_Financials_List_2017" can be found in this repository
+  * "Opera_Companies_Canada_List_2017" can be found in this repository
 4. Author(s) Names (or person responsible for collecting the data):   
   * Emily Edwards
   * Jonathan Cain 
 5. Author(s) ORCID IDs:   
-  N/A
+  Jonathan Cain
+  ORCID: 0000-0002-8694-1420
 6. Contact Information:   
   * Emily Edwards  
   Planning, Public Policy and Management Masters Candidate  
@@ -36,7 +39,7 @@
 10. Citations of Publications Using These Data:   
   N/A
 11. Digital Object Identifiers (DOIs) of Publications Using These Data:   
-  N/A
+  10.5281/zenodo.303273
 12. Purpose of Collection:  
   The purpose of this script is to merge a compiled list of all Opera Companies in the US with their corresponding IRS 990 data, if available. 
 
@@ -45,12 +48,16 @@
   * IRS: Internal Revenue Service in the US
   * Form 990: The "Return of Organization Exempt From Income Tax", of Form 990 is a United States Internal Revenue Service form that provides the public with financial information about a nonprofit organization. It is often the only source of such information.
   * EIN: Employer Identification Number given to registered tax exempt nonprofit organizations
-14. Example Data in Set:  
-N/A
+14. Example Data in Set:   
+
+| EIN | NAME | ICO | STREET | CITY | STATE | ZIP | GROUP | SUBSECTION | AFFILIATION | CLASSIFICATION | ETC... |  
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
+| 231352001 | ACADEMY OF VOCAL ARTS |   | 1920 SPRUCE ST | PHILADELPHIA | PA | 19103-6613 | 0  | 3  | 3  | 1000 |   |   
+
 15. Lineage of Dataset:   
   N/A
 16. Geographic Information:   
-  N/A
+  North America
 
 ### Methodological Information
 17. Method description, links or references to publications or other documentation containing experimental design or protocols used in data collection:  
@@ -107,12 +114,12 @@ N/A
 
 ### Sharing/Access Information
 27.	Licenses or restrictions placed on the data:   
-  MIT License
+  Open
 28.	Links to publications that cite or use the data:   
   N/A
 29.	Links to other publicly accessible locations of the data:   
   N/A
 30.	Recommended citation for the data:  
-
+Cain, J. & Edwards, E. (2017). Opera_Company_IRS_990_Merge. [Data Compliation]. 
 31.	Information about funding sources that supported the collection of the data:   
   N/A
