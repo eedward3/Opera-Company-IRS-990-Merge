@@ -54,6 +54,7 @@
 | EIN | NAME | ICO | STREET | CITY | STATE | ZIP | GROUP | SUBSECTION | AFFILIATION | CLASSIFICATION | ETC... |  
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |  
 | 231352001 | ACADEMY OF VOCAL ARTS |   | 1920 SPRUCE ST | PHILADELPHIA | PA | 19103-6613 | 0  | 3  | 3  | 1000 |   |   
+| 43519499 | ACTING SINGERS PROJECT | DAVID WALTHER | 126 NEWBURG ST | ROSLINDALE | MA | 02131-3319 | 0 | 3 | 3 | 2000|   |
 
 15. Lineage of Dataset:   
   N/A
