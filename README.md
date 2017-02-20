@@ -48,7 +48,7 @@
   * EIN: Employer Identification Number given to registered tax exempt nonprofit organizations
 14. Example Data in Set:  
 |EIN|NAME|ICO|STREET|STATE|ZIP|GROUP|SUBSECTION|AFFILIATION|CLASSIFICATION|ETC.|
-|---|---|---|---|---|---|---|---|---|---|---|
+|----|----|----|----|----|----|----|----|----|----|----|
 |231352001|ACADEMY OF VOCAL ARTS| |1920 SPRUCE ST|PHILADELPHIA|PA|19103-6613|0|3|3|1000| |
 15. Lineage of Dataset:   
   N/A
