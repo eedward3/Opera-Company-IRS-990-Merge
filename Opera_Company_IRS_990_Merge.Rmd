@@ -25,7 +25,7 @@ EOBMF2015 <- rbind(region1,region2,region3,region4,regionPR,regionInt)
 ### Load Opera Companies Data
 Next pull in the list of Opera Companies from the compiled dataset.
 ```{r}
-Opera_data <- read.csv("NA_Opera_Companies_List_Final.csv")
+Opera_data <- read.csv("Opera_Companies_List_2017.csv")
 ```
 
 ### Merge the Data
