@@ -38,7 +38,7 @@
 11. Digital Object Identifiers (DOIs) of Publications Using These Data:   
   N/A
 12. Purpose of Collection:  
-  The purpose of this script is to merge a compiled list of all Opera Companies in the US with their IRS 990 data, if available. 
+  The purpose of this script is to merge a compiled list of all Opera Companies in the US with their corresponding IRS 990 data, if available. 
 
 ### Basic Information- Data Description
 13. Key Words and Definitions:  
