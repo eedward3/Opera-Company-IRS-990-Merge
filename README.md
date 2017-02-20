@@ -122,6 +122,6 @@
 29.	Links to other publicly accessible locations of the data:   
   N/A
 30.	Recommended citation for the data:  
-Cain, J. & Edwards, E. (2017). Opera_Company_IRS_990_Merge. [Data Compliation]. 
+Cain, J. & Edwards, E. (2017). Opera_Company_IRS_990_Merge. [Data Compliation]. doi:10.5281/zenodo.303273
 31.	Information about funding sources that supported the collection of the data:   
   N/A
